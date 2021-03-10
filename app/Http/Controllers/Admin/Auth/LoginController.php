@@ -33,10 +33,10 @@ class LoginController extends Controller
      *
      * @return void
      */
-    // public function __construct()
-    // {
-    //     $this->middleware('guest:admin')->except('logout');
-    // }
+    public function __construct()
+    {
+    $this->middleware('guest:admin')->except('logout');
+    }
     
     public function showLoginForm()
     {
@@ -45,13 +45,13 @@ class LoginController extends Controller
     
     protected function guard()
     {
-        return \Auth::guard('admin');
+        return \Auth::guard('web');
     }
     
     public function logout(Request $request)
     {
-         $this->guard('admin')->logout();
-         // $request->session()->invalidate(); これが全部のSessionを消してしまう
+         $this->guard('web')->logout();
+         //$request->session()->invalidate(); これが全部のSessionを消してしまう
          return redirect('/');
     }
 }

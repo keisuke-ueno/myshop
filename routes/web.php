@@ -19,23 +19,25 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//Route::group(['prefix' => 'admin' ], function(){
-Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
+Route::group(['prefix' => 'admin' ], function(){
     
-    Auth::routes();
+    
+//Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
+    
+    //Auth::routes();
 
     //home
     Route::get('home', 'Admin\HomeController@index')->name('admin.home');
     
     //login logout
-    //Route::get('login', 'Admin\Auth\LoginController@showLoginForm')->name('admin.login');
-    //Route::post('login', 'Admin\Auth\LoginController@login')->name('admin.login');
-    // Route::post('logout', 'Admin\Auth\LoginController@logout')->name('admin.logout');
-    
-    // //register
-    // Route::get('register', 'Admin\Auth\RegisterController@showRegisterForm')->name('admin.register');
-    // Route::post('register', 'Admin\Auth\RegisterController@register')->name('admin.register');
-    
-    //product
-    Route::get('productnew','Admin\ProductController@add')->name('admin.product');
+        Route::get('login', 'Admin\Auth\LoginController@showLoginForm')->name('admin.login');
+        Route::post('login', 'Admin\Auth\LoginController@login')->name('admin.login');
+        Route::post('logout', 'Admin\Auth\LoginController@logout')->name('admin.logout');
+        
+        // //register
+        Route::get('register', 'Admin\Auth\RegisterController@showRegisterForm')->name('admin.register');
+        Route::post('register', 'Admin\Auth\RegisterController@register')->name('admin.register');
+        
+        //product
+        Route::get('productnew','ProductController@add')->name('admin.product');
 });
