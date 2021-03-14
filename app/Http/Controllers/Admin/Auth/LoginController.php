@@ -45,12 +45,12 @@ class LoginController extends Controller
     
     protected function guard()
     {
-        return \Auth::guard('web');
+        return \Auth::guard('admin');
     }
     
     public function logout(Request $request)
     {
-         $this->guard('web')->logout();
+         $this->guard('admin')->logout();
          //$request->session()->invalidate(); これが全部のSessionを消してしまう
          return redirect('/');
     }
