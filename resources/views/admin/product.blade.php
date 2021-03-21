@@ -16,17 +16,26 @@
                         </ul>
                     @endif
                     <div class="form-group row">
-                        <label class="col-md-2">タイトル</label>
+                        <label class="col-md-2">商品名</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="title" value="{{ old('title') }}">
+                            <input type="text" class="form-control" name="name" value="{{ old('name') }}">
                         </div>
                     </div>
+                    
                     <div class="form-group row">
-                        <label class="col-md-2">本文</label>
+                        <label class="col-md-2">価格</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="body" rows="20">{{ old('body') }}</textarea>
+                            <input type="text" class="form-control" name="price" value="{{ old('price') }}">
                         </div>
                     </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-md-2">商品説明</label>
+                        <div class="col-md-10">
+                            <textarea class="form-control" name="introduction" rows="20">{{ old('introduction') }}</textarea>
+                        </div>
+                    </div>
+                    
                     <div class="form-group row">
                         <label class="col-md-2">画像</label>
                         <div class="col-md-10">

@@ -11,7 +11,7 @@ class Product extends Model
     //
     public static $rules = array(
         'name' => 'required',
-        'photo' => 'required',
+        //'photo' => 'required',
         'price' => 'required',
         'introduction' => 'required',
         );
