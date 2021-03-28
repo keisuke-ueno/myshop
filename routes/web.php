@@ -41,7 +41,7 @@ Route::get('/home', 'HomeController@index')->name('home');
         Route::post('register', 'Admin\Auth\RegisterController@register')->name('admin.register');
         
         //product
-        Route::get('product','Admin\ProductController@add')->name('admin.product');
+        Route::get('product','Admin\ProductController@add')->name('addmin.product');
         Route::post('product','Admin\ProductController@create');
-        Route::get('itiran','Admin\ProductController@index');
+        Route::get('itiran','Admin\ProductController@index')->name('admin.itiran');;
 });
