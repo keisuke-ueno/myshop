@@ -50,7 +50,7 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-        return parent::errend($request, $exception);
+        return parent::render($request, $exception);
     }
     protected function unauthenticated($request, AuthenticationException $exception)
     {

@@ -83,10 +83,10 @@ class ProductController extends Controller
          unset($product_form['remove']);
          unset($product_form['_token']);
          
-        //  $history = new History;
-        //  $history->news_id = $news->id;
-        //  $history->edited_at = Carbon::now();
-        //  $history->save();
+         $history = new History;
+         $history->news_id = $news->id;
+         $history->edited_at = Carbon::now();
+         $history->save();
          
          $product_form->fill($product_form)->save();
          return redirect('admin/itiran');
