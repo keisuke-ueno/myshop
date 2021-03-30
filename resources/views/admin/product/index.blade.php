@@ -44,11 +44,11 @@
                                     <td>{{ \Str::limit($product->name, 100) }}</td>
                                     <td>{{ \Str::limit($product->introduction, 250) }}</td>
                                     <td>
-                                        <!--<div>-->
-                                        <!--    <a href="{{ action('Admin\ProductController@edit',['id' => $product->id]) }}">編集</a>-->
-                                        <!--</div>-->
                                         <div>
-                                            <a href="{{ action('Admin\ProductController@delete',['id' => $prodect->id]) }}">削除</a>
+                                            <a href="{{ action('Admin\ProductController@edit',['id' => $product->id]) }}">編集</a>
+                                        </div>
+                                        <div>
+                                            <a href="{{ action('Admin\ProductController@delete',['id' => $product->id]) }}">削除</a>
                                         </div>
                                     </td>
                                 </tr>

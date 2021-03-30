@@ -43,5 +43,8 @@ Route::get('/home', 'HomeController@index')->name('home');
         //product
         Route::get('product','Admin\ProductController@add')->name('addmin.product');
         Route::post('product','Admin\ProductController@create')->name('addmin.product');
-        Route::get('itiran','Admin\ProductController@index')->name('admin.itiran');;
+        Route::get('itiran','Admin\ProductController@index')->name('admin.itiran');
+        Route::get('edit','Admin\ProductController@edit')->name('admin.edit');
+        Route::post('edit','Admin\ProductController@update')->name('admin.update');
+        Route::get('delete','Admin\ProductController@delete')->name('admin.delete');
 });
