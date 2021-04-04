@@ -48,3 +48,4 @@ Route::get('/home', 'HomeController@index')->name('home');
         Route::post('edit','Admin\ProductController@update')->name('admin.update');
         Route::get('delete','Admin\ProductController@delete')->name('admin.delete');
 });
+Route::get('/','ProductController@index');
