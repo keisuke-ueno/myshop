@@ -14,5 +14,11 @@ class Product extends Model
         //'photo' => 'required',
         'price' => 'required',
         'introduction' => 'required',
-        );
+    );
+    
+    public function histories()
+    {
+      return $this->hasMany('App\History');
+
+    }
 }

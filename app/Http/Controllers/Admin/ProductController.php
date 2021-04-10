@@ -6,13 +6,15 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use App\Product;
+use App\History;
+use Carbon\Carbon;
 use Storage;
 
 class ProductController extends Controller
 {
     public function add()
     {
-        return view('admin.product');
+        return view('admin.create');
         }
         
     public function create(Request $request)
@@ -34,7 +36,7 @@ class ProductController extends Controller
          $product->fill($form);
          $product->save();
 
-        return redirect('admin/product'); 
+        return redirect('admin/create'); 
     }
     
     public function index(Request $request)
@@ -84,7 +86,7 @@ class ProductController extends Controller
          unset($product_form['_token']);
          
          $history = new History;
-         $history->news_id = $news->id;
+         $history->product_id = $product->id;
          $history->edited_at = Carbon::now();
          $history->save();
          

@@ -20,6 +20,12 @@
                             <input type="text" class="form-control" name="name" value="{{$product_form->name }}">
                         </div>
                     </div>
+                     <div class="form-group row">
+                        <label class="col-md-2" for="name">価格</label>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" name="price" value="{{$product_form->pride }}">
+                        </div>
+                    </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="introduction">商品説明</label>
                         <div class="col-md-10">
