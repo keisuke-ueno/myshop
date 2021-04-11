@@ -80,8 +80,8 @@
           </ol>
           <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide">
-              <img src="{{ secure_asset('/assets/cup_yellow.jpg') }}" rel="stylesheet">
+              
+              <img class=products-index-logo1 src="{{ secure_asset('/assets/cup_yellow.jpg') }}" rel="stylesheet">
             </div>
             <div class="carousel-item">
               <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Second slide">
@@ -100,17 +100,17 @@
           </a>
         </div>
 
-        <div class="row">
+       <div class="row">
     @foreach($posts as $post)
-<div class="col-md-4">
+         <div class="col-md-4">
             <div class="card mb-4 box-shadow">
               <img src="{{ $post->photo }}">
               <div class="card-body">
                 <h4 class="card-title"></h4>
                  <a href="#">{{ $post->name }}</a>
-                <h5 class="card-price"></h5>
+                 <h5 class="card-price"></h5>
                  <a href="#">{{ $post->price }}</a>
-                <h5 class="card-text"></h5>
+                 <h5 class="card-text"></h5>
                  <a href="#">{{ $post->introduction}}</a>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
@@ -118,10 +118,11 @@
                       <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                     </div>
                     <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
+                  </div>  
               </div>
             </div>
+         </div>
+        </div>
 @endforeach      
 
          
@@ -182,3 +183,4 @@
 <!--              </div>-->
 <!--            </div>-->
 <!--@endforeach-->
+

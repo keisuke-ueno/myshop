@@ -49,3 +49,4 @@ Route::get('/home', 'HomeController@index')->name('home');
         Route::get('delete','Admin\ProductController@delete')->name('admin.delete');
 });
 Route::get('/','ProductController@index');
+Route::post('/charge', 'ChargeController@charge');
