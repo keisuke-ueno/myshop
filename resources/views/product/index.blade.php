@@ -62,9 +62,9 @@
 
         <h1 class="my-4">Shop Name</h1>
         <div class="list-group">
-          <a href="#" class="list-group-item">Category 1</a>
-          <a href="#" class="list-group-item">Category 2</a>
-          <a href="#" class="list-group-item">Category 3</a>
+          <a href="" class="list-group-item">Category 1</a>
+          <a href="" class="list-group-item">Category 2</a>
+          <a href="" class="list-group-item">Category 3</a>
         </div>
 
       </div>
@@ -107,11 +107,11 @@
               <img src="{{ $post->photo }}">
               <div class="card-body">
                 <h4 class="card-title"></h4>
-                 <a href="#">{{ $post->name }}</a>
+                 <a href="{{ $post->name }}"</a>
                  <h5 class="card-price"></h5>
-                 <a href="#">{{ $post->price }}</a>
+                 <a href="{{ $post->price }}"</a>
                  <h5 class="card-text"></h5>
-                 <a href="#">{{ $post->introduction}}</a>
+                 <a href="{{ $post->introduction}}"</a>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
