@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+    });
 
 Auth::routes();
 
@@ -50,3 +50,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 });
 Route::get('/','ProductController@index');
 Route::post('/charge', 'ChargeController@charge');
+
+//  Route::get('/','UenocoffeeController@base');
+//  route::get('store.html','UenocoffeeController@store');
+// route::get('products.html','UenocoffeeController@product');

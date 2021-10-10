@@ -90,7 +90,7 @@ class ProductController extends Controller
          $history->edited_at = Carbon::now();
          $history->save();
          
-         $product_form->fill($product_form)->save();
+         $product->fill($product_form)->save();
          return redirect('admin/itiran');
      }
      public function delete(Request $request)
@@ -99,5 +99,6 @@ class ProductController extends Controller
          $product->delete();
          return redirect('admin/itiran/');
      }
-
+     
+    
 }

@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Shop Homepage </title>
+  <title>ucf</title>
 
   <!-- Bootstrap core CSS -->
   //<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -18,17 +18,18 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>-->
  
   <!-- Custom styles for this template -->
- <link href="{{ secure_asset('css/index.css') }}" rel="stylesheet">
-
+  
+ //<link href="{{ secure_asset('css/index.css') }}" rel="stylesheet">
+ <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+ <link href="{{ asset('css/welcome.css') }}" rel="stylesheet">
 </head>
 
 <body>
-<body>
-
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Start Bootstrap</a>
+      <img src="assets/cup_yellow.jpg" width="40" height="30" class="d-inline-block align-top" alt="">
+      <a class="navbar-brand" href="#"> 　UENO COFFEE FACTORY </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -43,7 +44,7 @@
             <a class="nav-link" href="#">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
+            <a class="nav-link" href="#">login</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Contact</a>
@@ -55,39 +56,34 @@
 
   <!-- Page Content -->
   <div class="container">
-
     <div class="row">
-
+      
       <div class="col-lg-3">
-
-        <h1 class="my-4">Shop Name</h1>
+        <h3 class="my-4"></h3>
         <div class="list-group">
           <a href="" class="list-group-item">Category 1</a>
           <a href="" class="list-group-item">Category 2</a>
           <a href="" class="list-group-item">Category 3</a>
         </div>
-
       </div>
-      <!-- /.col-lg-3 -->
-
-      <div class="col-lg-9">
-
-        <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+      
+    <div class="col-lg-9">
+      <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
           </ol>
+             
           <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-              
-              <img class=products-index-logo1 src="{{ secure_asset('/assets/cup_yellow.jpg') }}" rel="stylesheet">
+              <img class="products-index-logo1" src="{{ secure_asset('/assets/square_brown.JPG') }}" style="margin-top: 55px"　rel="stylesheet">
             </div>
             <div class="carousel-item">
-              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Second slide">
+              <img class= "products-index-logo1" src="{{ secure_asset('/assets/cup_yellow.jpg') }}" style="margin-top: 55px"　rel="stylesheet">
             </div>
             <div class="carousel-item">
-              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Third slide">
+              <img class="products-index-logo1" src="{{ secure_asset('/assets/square_yellow.JPG') }}" style="margin-top: 55px"　rel="stylesheet">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -99,12 +95,13 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
-
+      </div>
+      
+      @foreach($posts as $post)
        <div class="row">
-    @foreach($posts as $post)
          <div class="col-md-4">
             <div class="card mb-4 box-shadow">
-              <img src="{{ $post->photo }}">
+              <img class="products-photo-2" src="{{ $post->photo }}">
               <div class="card-body">
                 <h4 class="card-title"></h4>
                  <a href="{{ $post->name }}"</a>
@@ -115,34 +112,24 @@
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      <!--<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
                     </div>
-                    <small class="text-muted">9 mins</small>
+                    <!--<small class="text-muted">9 mins</small>-->
                   </div>  
               </div>
             </div>
          </div>
-        </div>
+       </div>
 @endforeach      
-
-         
-
-        </div>
-        <!-- /.row -->
-
-      </div>
-      <!-- /.col-lg-9 -->
-
     </div>
     <!-- /.row -->
-
-  </div>
-  <!-- /.container -->
+   </div>
+   <!-- /.container -->
 
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+      <p class="m-0 text-center text-white">UENO COFFEE FACTORY</p>
     </div>
     <!-- /.container -->
   </footer>
@@ -152,35 +139,4 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
-
-
-</body>
-
 </html>
-
-<!--@foreach($posts as $post)-->
-<!--<div class="col-md-4">-->
-<!--              <div class="card mb-4 box-shadow">-->
-<!--                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22208%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20208%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1789ca5e9f8%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A11pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1789ca5e9f8%22%3E%3Crect%20width%3D%22208%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2266.9296875%22%20y%3D%22117.45%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">-->
-<!--                <div class="card-body">-->
-<!--                  <h4 class="card-title">-->
-<!--                  <a href="#">{{ $post->name }}</a>-->
-<!--                </h4>-->
-                    
-<!--                <h5 class="card-price"></h5>-->
-<!--                <a href="#">{{ $post->price }}</a>-->
-<!--                <h5 class="card-text"></h5>-->
-<!--                <a href="#">{{ $post->introduce}}</a>-->
-<!--                  <div class="d-flex justify-content-between align-items-center">-->
-<!--                    <div class="btn-group">-->
-<!--                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>-->
-<!--                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
-<!--                    </div>-->
-<!--                    <small class="text-muted">9 mins</small>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--@endforeach-->
-
